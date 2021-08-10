@@ -45,11 +45,13 @@ span button{
 }
 footer {
     margin:auto;
+    color: var(--txt-color);
 }
 button{
     cursor: pointer;
 }
 li{
+    color: var(--txt-color);
     display: inline;
     padding:1rem;
     font-size: x-large;
