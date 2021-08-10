@@ -43,6 +43,18 @@ span button{
     
     color: red;
 }
+footer {
+    margin:auto;
+}
 button{
     cursor: pointer;
+}
+li{
+    display: inline;
+    padding:1rem;
+    font-size: x-large;
+}
+.list-non-bullet{
+    list-style: none;
+    display: inline;
 }
