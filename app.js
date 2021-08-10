@@ -3,23 +3,36 @@ var luckNumber=document.querySelector("#lucky-no");
 var checkButton=document.querySelector("#check-btn");
 var container=document.querySelector(".container")
 var message=document.createElement("p");
-console.log(dob.value);
+var privMsg=document.querySelector("#privacy");
+var closeBtn=document.querySelector("#close");
+console.log(privMsg,closeBtn);
 
 function sumOfDigits(doB){
     var dob=Number(doB);
+    
     var sum=0;
-    while(doB>0){
-       sum+=dob%10;
-       dob=dob/10;
+    while(dob>0){
+       sum=sum+dob % 10;
+       dob=Math.trunc(dob/10);
     }
-    console.log(sum);
+    
     return sum;
 }
 function checkLukyNumber(dob,luckNumber){
     var doB=dob;
-    var luckNo=luckNumber;
+
     doB=doB.replaceAll("-","");
     var sum=sumOfDigits(doB);
+    if(sum%luckNumber===0)
+    {   message.remove();
+        message.innerText="You are Lucky👏"
+        container.appendChild(message);
+    }else{
+        message.remove()
+        message.innerText="Go Work Unitl you Become Lucky"
+        container.appendChild(message);
+    }
+
 }
 function checkHandler(){
    if(dob.value===""||luckNumber.value===""){
@@ -32,4 +45,6 @@ function checkHandler(){
    }
 }
 checkButton.addEventListener("click",checkHandler);
-
+closeBtn.addEventListener("click",function(){
+  privMsg.style.display="none";
+});
