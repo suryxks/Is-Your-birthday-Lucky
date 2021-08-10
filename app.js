@@ -29,7 +29,7 @@ function checkLukyNumber(dob,luckNumber){
         container.appendChild(message);
     }else{
         message.remove()
-        message.innerText="Go Work Unitl you Become Lucky"
+        message.innerText="Go Work Until you Become Lucky"
         container.appendChild(message);
     }
 
