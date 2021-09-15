@@ -3,3 +3,11 @@ Vanilla Js app  to get check your birthday is lucky or not by getting date of bi
 Logic :if the sum of the digits in your date of birth is divisible by lucky number you are lucky
 
 This is a fun app made to enhance my javascript knowledge.
+
+Tech Stack
+
+1)HTML
+
+2)CSS
+
+3)Javascript
